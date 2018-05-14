@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yeehome</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', "#{params[:controller]}", 'data-turbolinks-track': 'reload' %>
+    <% if File.exist?(Rails.root.join("app/assets/javascripts/www/#{params[:controller]}/#{params[:action]}.js")) %>
+    <%= javascript_include_tag "www/#{params[:controller]}/#{params[:action]}", 'data-turbolinks-track': 'reload' %>
+    <% end %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
