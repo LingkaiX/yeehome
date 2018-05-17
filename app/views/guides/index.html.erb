@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Desc</th>
+      <th>ID</th>
+      <th>Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +16,8 @@
     <% @guides.each do |guide| %>
       <tr>
         <td><%= guide.title %></td>
-        <td><%= guide.desc %></td>
+        <td><%== guide.id %></td>
+        <td><%== guide.status %></td>
         <td><%= link_to 'Show', guide %></td>
         <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
         <td><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>

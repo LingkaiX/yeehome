@@ -15,7 +15,14 @@
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
-
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status, Guide.statuses.keys.map{|x| [x.humanize, x]} %>
+  </div>
+  <div class="field">
+  <%= form.label :cover_image %>
+  <%= form.file_field :cover_image, direct_upload: true %>
+  </div>
   <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content, class: "tinymce", cols: 20, rows: 40 %>

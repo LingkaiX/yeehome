@@ -1,4 +1,5 @@
 class GuidesController < ApplicationController
+  before_action :logged_in_user, only: [:index, :new, :edit, :create, :update, :destroy]
   before_action :set_guide, only: [:show, :edit, :update, :destroy]
 
   # GET /guides
@@ -24,7 +25,7 @@ class GuidesController < ApplicationController
   # POST /guides
   # POST /guides.json
   def create
-    @guide = Guide.new(guide_params)
+    @guide = current_user.guides.build(guide_params)
 
     respond_to do |format|
       if @guide.save
@@ -69,6 +70,6 @@ class GuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
-      params.require(:guide).permit(:title, :desc)
+      params.require(:guide).permit(:title, :desc, :content, :status, :cover_image, :meta)
     end
 end

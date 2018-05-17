@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :guides
   resources :businesses
   root 'pages#home'
-  get 'pages/home'
+  get '/admin',   to: 'pages#admin'
   match "tinyimgs" => "imgs#create", via: :post
 
   get    '/login',   to: 'sessions#new'

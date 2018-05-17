@@ -4,10 +4,10 @@
   <strong>Title:</strong>
   <%= @guide.title %>
 </p>
-
+<p><%= image_tag(@guide.cover_image) if @guide.cover_image.attached? %></p>
 <p>
-  <strong>Desc:</strong>
-  <%= @guide.desc %>
+  <strong>content:</strong>
+  <%== @guide.content %>
 </p>
 
 <%= link_to 'Edit', edit_guide_path(@guide) %> |
