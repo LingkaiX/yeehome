@@ -35,7 +35,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Self Add Gems
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-
+gem 'meta-tags', '~> 2.9'
+gem 'bcrypt'
 
 
 group :development, :test do

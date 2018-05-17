@@ -1,0 +1,104 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+  height: 100px;
+}
+.top-sec {
+  background-image: url(bg2.jpg);
+  height: 600px;
+  padding: 65px 0;
+}
+.blocks {
+  height: 470px;
+  width: 1190px;
+  margin: 0 auto;
+  position: relative;
+}
+.block-main,
+.block-left,
+.block-right,
+.block-1,
+.block-2,
+.block-3,
+.block-4,
+.block-5 {
+  position: absolute;
+}
+.block-left {
+  width: 230px;
+  height: 470px;
+  top: 0;
+  left: 0;
+}
+.block-main {
+  width: 470px;
+  height: 470px;
+  top: 0;
+  left: 240px;
+}
+.block-right {
+  width: 470px;
+  height: 470px;
+  top: 0;
+  right: 0;
+}
+.block-1,
+.block-2,
+.block-3,
+.block-4 {
+  width: 230px;
+  height: 230px;
+}
+.block-2 {
+  left: 0;
+  bottom: 0;
+}
+.block-4 {
+  right: 0;
+  top: 0;
+}
+.block-5 {
+  width: 470px;
+  height: 230px;
+  left: 0;
+  bottom: 0;
+}
+.block-main,
+.block-1,
+.block-2,
+.block-3,
+.block-4,
+.block-5 {
+  background-color: $c-yellow;
+}
+
+@media (max-width: $lg-max) {
+  .blocks {
+    height: 470px;
+    width: 950 px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+main {
+  & {
+    padding-top: 40px;
+  }
+  .col-8 {
+    .card {
+      height: 1100px;
+    }
+  }
+  .col-12 {
+    .card {
+      height: 330px;
+      margin-bottom: 10px;
+    }
+  }
+}
+footer {
+  height: 300px;
+  background-color: $c-dark;
+  color: $c-yellow;
+}
