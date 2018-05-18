@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_17_070748) do
+ActiveRecord::Schema.define(version: 2018_05_18_005425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,11 @@ ActiveRecord::Schema.define(version: 2018_05_17_070748) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+  end
+
   create_table "guides", force: :cascade do |t|
     t.string "title"
     t.string "desc"
@@ -53,6 +58,7 @@ ActiveRecord::Schema.define(version: 2018_05_17_070748) do
     t.integer "type"
     t.jsonb "meta"
     t.integer "user_id"
+    t.integer "category_id"
     t.index ["status"], name: "index_guides_on_status"
     t.index ["type"], name: "index_guides_on_type"
   end

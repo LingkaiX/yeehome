@@ -55,7 +55,7 @@ class GuidesController < ApplicationController
   # DELETE /guides/1
   # DELETE /guides/1.json
   def destroy
-    @guide.destroy
+    @guide.removed!
     respond_to do |format|
       format.html { redirect_to guides_url, notice: 'Guide was successfully destroyed.' }
       format.json { head :no_content }
@@ -70,6 +70,6 @@ class GuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
-      params.require(:guide).permit(:title, :desc, :content, :status, :cover_image, :meta)
+      params.require(:guide).permit(:title, :desc, :content, :status, :cover_image, :meta, :category_id)
     end
 end

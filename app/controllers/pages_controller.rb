@@ -6,4 +6,10 @@ class PagesController < ApplicationController
   def admin
   end
 
+  def slug
+  end
+
+  def slug2
+
+  end
 end

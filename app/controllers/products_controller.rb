@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :logged_in_user, only: [:index, :new, :edit, :create, :update, :destroy]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products

@@ -1,15 +1,15 @@
 <h4>攻略</h4>
-    <p>攻略列表<%= link_to 'index', products_path %></p>
+    <p>攻略列表<%= link_to 'index', guides_path %></p>
     <p>写新攻略<%= link_to 'New Guide', new_guide_path %></p>
 <h4>商家</h4>
-    <p>列表</p>
-    <p>新建</p>
+    <p>列表<%= link_to 'index', businesses_path %></p>
+    <p>新建<%= link_to 'New Business', new_business_path %></p>
 <h4>商品</h4>
-    <p>列表</p>
-    <p>新建</p>
+    <p>列表<%= link_to 'index', products_path %></p>
+    <p>新建<%= link_to 'New Product', new_product_path %></p>
 <h4>类别</h4>
-    <p>列表</p>
-    <p>新建</p>
+    <p>列表<%= link_to 'index', categories_path %></p>
+    <p>新建<%= link_to 'New Categories', new_category_path %></p>
 <h4>用户</h4>
     <p><%= link_to 'Edit', edit_user_path(current_user) %></p>
     <p><%= link_to "Log out", logout_path, method: :delete %></p>

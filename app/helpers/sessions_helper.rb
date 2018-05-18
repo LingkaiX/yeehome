@@ -23,15 +23,14 @@ module SessionsHelper
     end
     # 用来验证是否是admin
     def admin_user
-        unless @current_user.admin?
+        unless current_user.admin?
             flash[:danger] = "You must be admin."
             redirect_to(root_url)
         end
     end
     # 用来验证是否是admin 或当前用户
     def admin_or_current_user
-        @user = User.find(params[:id])
-        unless @current_user.admin? || current_user?(@user)
+        unless current_user.admin? || current_user?(@user)
             flash[:danger] = "That is not yours."
             redirect_to(root_url)
         end

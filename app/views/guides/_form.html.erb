@@ -20,6 +20,10 @@
     <%= form.select :status, Guide.statuses.keys.map{|x| [x.humanize, x]} %>
   </div>
   <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select :category_id, Category.all.map{|x| [x.name, x.id]} %>
+  </div>
+  <div class="field">
   <%= form.label :cover_image %>
   <%= form.file_field :cover_image, direct_upload: true %>
   </div>

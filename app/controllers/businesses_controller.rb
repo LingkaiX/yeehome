@@ -1,4 +1,5 @@
 class BusinessesController < ApplicationController
+  before_action :logged_in_user, only: [:index, :new, :edit, :create, :update, :destroy]
   before_action :set_business, only: [:show, :edit, :update, :destroy]
 
   # GET /businesses
