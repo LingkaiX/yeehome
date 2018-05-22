@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @guide.title %>
+</p>
+<p><%= image_tag(@guide.cover_image) if @guide.cover_image.attached? %></p>
+<p>
+  <strong>content:</strong>
+  <%== @guide.content %>
+</p>
+
+<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<%= link_to 'Back', guides_path %>

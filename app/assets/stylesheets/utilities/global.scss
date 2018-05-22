@@ -1,0 +1,22 @@
+//Global style below
+$c-main: #4a849f;
+$c-dark: #1b3440;
+$c-light: #b4d6c6;
+$c-yellow: #f5f1d5;
+$c-red: #f2845c;
+$xs-max: 575.98px;
+$sm-min: 576px;
+$sm-max: 767.98px;
+$md-min: 768px;
+$md-max: 991.98px;
+$lg-min: 992px;
+$lg-max: 1199.98px;
+$xl-min: 1200px;
+
+@media (min-width: $xl-min) {
+  * {
+    font-family: "lucida grande", "lucida sans unicode", lucida, Helvetica,
+      Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC",
+      "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif, Ionicons;
+  }
+}

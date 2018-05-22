@@ -1,6 +1,54 @@
-<h1>Pages#home</h1>
-<p class="btn">Find me in app/views/pages/home.html.erb</p>
-  <form method="post">
-    <textarea class="tinymce">Hello, World!</textarea>
-  </form>
-<%= render 'layouts/tinymce' %>
+<% content_for :extra_head do %>
+     <style></style>
+<% end %>
+<header>
+  <div class="container">
+    <div class="row">
+        <div class="col">
+          <h1>LOGO</h1>
+      </div>
+      <div class="col-8">
+        <div class="row">
+          <div class="col"><%= link_to '主题', businesses_path %></div>
+          <div class="col"><%= link_to '发现', guides_path %></div>
+          <div class="col"><%= link_to '分类', products_path %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="top-sec">
+  <div class="blocks">
+    <div class="block-left">
+        <div class="block-1">block-1</div>
+        <div class="block-2">block-2</div>     
+    </div>
+    <div class="block-main">block-main slidings</div>
+    <div class="block-right">
+      <div class="block-3">block-3</div>
+      <div class="block-4">block-4</div>
+      <div class="block-5">block-5</div>
+    </div>
+  </div>
+</section>
+<main class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="card"></div>
+    </div>
+    <div class="col-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card"></div>
+        </div>
+        <div class="col-12">
+          <div class="card"></div>
+        </div>
+        <div class="col-12">
+          <div class="card"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>footer</footer>

@@ -17,4 +17,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile = ['*.js', '*.css', '*.scss']
 
 Rails.application.config.assets.css_compressor = :sass
-Rails.application.config.assets.js_compressor = :uglifier
+#Rails.application.config.assets.js_compressor = :uglifier
+
+Rails.application.config.generators do |g|
+    g.scaffold_stylesheet false
+end

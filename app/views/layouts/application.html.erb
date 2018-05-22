@@ -6,13 +6,18 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', "#{params[:controller]}", 'data-turbolinks-track': 'reload' %>
-    <% if File.exist?(Rails.root.join("app/assets/javascripts/www/#{params[:controller]}/#{params[:action]}.js")) %>
-    <%= javascript_include_tag "www/#{params[:controller]}/#{params[:action]}", 'data-turbolinks-track': 'reload' %>
-    <% end %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# if File.exist?(Rails.root.join("app/assets/javascripts/www/#{params[:controller]}/#{params[:action]}.js")) %>
+    <%#= javascript_include_tag "www/#{params[:controller]}/#{params[:action]}", 'data-turbolinks-track': 'reload' %>
+    <%# end %>
+    <%= yield(:extra_head) %>
   </head>
 
-  <body>
+  <body class="<%= "#{params[:controller]}-#{params[:action]}" %>">
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
     <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

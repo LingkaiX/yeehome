@@ -1,0 +1,10 @@
+<% content_for :extra_head do %>
+    <meta name="turbolinks-visit-control" content="reload">
+<% end %>
+
+<h1>Editing Guide</h1>
+
+<%= render 'form', guide: @guide %>
+
+<%= link_to 'Show', @guide %> |
+<%= link_to 'Back', guides_path %>
