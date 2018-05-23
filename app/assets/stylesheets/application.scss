@@ -11,9 +11,9 @@
  * It is generally better to create a new file per style scope.
  */
 /*****************************/
-@import "libs/*";
+@import "bootstrap";
 @import "utilities/*";
-@import "controllers/*";
+@import "*";
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
