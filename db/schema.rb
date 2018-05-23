@@ -55,12 +55,12 @@ ActiveRecord::Schema.define(version: 2018_05_18_005425) do
     t.datetime "updated_at", null: false
     t.text "content"
     t.integer "status"
-    t.integer "type"
+    t.integer "gtype"
     t.jsonb "meta"
     t.integer "user_id"
     t.integer "category_id"
+    t.index ["gtype"], name: "index_guides_on_gtype"
     t.index ["status"], name: "index_guides_on_status"
-    t.index ["type"], name: "index_guides_on_type"
   end
 
   create_table "products", force: :cascade do |t|

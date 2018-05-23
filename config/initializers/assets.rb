@@ -14,9 +14,9 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 # Rails.application.config.assets.precompile += %w( tinymce/* )
 
-Rails.application.config.assets.precompile = ['*.js', '*.css', '*.scss']
+Rails.application.config.assets.precompile = ['*.js', '*.css']
 
-Rails.application.config.assets.css_compressor = :sass
+#Rails.application.config.assets.css_compressor = :sass
 #Rails.application.config.assets.js_compressor = :uglifier
 
 Rails.application.config.generators do |g|

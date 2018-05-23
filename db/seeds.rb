@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# ruby encoding: utf-8
+User.create(name: 'Admin', email: 'admin@yeehome.com.au', role: 0, password: "foobar", password_confirmation: "foobar")

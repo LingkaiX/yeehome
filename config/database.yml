@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: yeehome_production
-  username: yeehome
-  password: <%= ENV['YEEHOME_DATABASE_PASSWORD'] %>
+  database: Rails.application.credentials.pgsql[:database]
+  username: postgres
+  password:
+  host: localhost
+  port: 5432
